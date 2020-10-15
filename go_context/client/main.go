@@ -59,5 +59,3 @@ func main() {
 // Notes
 // Contexts should be used for request related information only
 // Everything you put into a context is invisible to the rest of the code, don't add here things that are gonna be heavily used outside
-
-// HERE => https://youtu.be/LSzR0VEraWw?t=1500
