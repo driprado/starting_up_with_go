@@ -69,3 +69,9 @@ func addNumbers(x int, y int) {
 // 	}
 // 	fmt.Println(subFunc(4))
 // }
+
+// Summarizing; A function can take another function as argument and also return a another function
+// Example:
+// f func(func(int,int) int, int) func(int, int) int
+// function f  takes a function which in turn takes two integers and two more integers
+// function f returns a function which takes two integers and returns another integer
