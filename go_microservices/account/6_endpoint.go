@@ -1,38 +1,41 @@
-// Endpoint Structure contains the methods we want to expose to the public
-// CreateUser and GetUser are converted into endpoint.Endpoint type from upstream package
-
 package account
 
 import (
+	"context"
+
 	"github.com/go-kit/kit/endpoint"
 )
 
+// Endpoints struct contain the methods to be exposed to public
 type Endpoints struct {
-	CreareUser endpoint.Endpoint // Type Endpoint is a function that takes a context and an interface and returns an interface or an error.
-	GetUser    endpoint.Endpoint // Each endpoint represents a single RPC method
+	// Endpoint type is a function, takes a context and a request interface, returns a response interface or error
+	CreateUser endpoint.Endpoint // convert CreateUser to Endpoint type
+	GetUser    endpoint.Endpoint // convert GetUser to Endpoint type
 }
 
-func MakeEndpoints(s Service) Endpoints { // Takes a Service interface and returns an Endpoints structure
+// MakeEndpoints takes a service interface and return an Endpoint structure with the methods inside converted from methods to endpoints
+func MakeEndpoints(s Service) Endpoints {
 	return Endpoints{
-		CreateUser: makeCreateUserEndpoint(s), // Convert CreateUser method into endpoint
-		GetUser:    makeGetUserEndpoint(s),	// // Convert GetUser method into endpoint
+		CreateUser: makeCreateUserEndpoint(s), // converts CreateUser into endpoint.Endpoint
+		GetUser:    makeGetUserEndpoint(s),    // converts GetUser into endpoint.Endpoint
+	}
 }
 
-// makeCreateUserEndpoint takes a Service interface and converts it's method "CreateUser into an endpoint (which is an item inside the Endpoint structure)"
 func makeCreateUserEndpoint(s Service) endpoint.Endpoint {
-	return func(ctx context.Context, request interface{}) (interface{}, error) { // Anonymus function that works as a wrapper for our existing methods, since endpoint.Endpoint is a function, it needs to return a function
-		req := request.(CreateUserRequest) // request interface{} from above function converted into type CreateUserRequest (structure containing email and password) defined in 5_reqresp.go
-		ok, err := s.CreateUser(ctx, req.Email, req.Password) // since req is of type CreateUserRequest, it has Email and Password fields
-		return CreateUserResponse{OK: ok}, err
-	 } // If no error, return a CreateUserResponse struct with OK value ok
+	// Since Endpoint type is a function, it has to return a function
+	return func(ctx context.Context, request interface{}) (interface{}, error) {
+		req := request.(CreateUserRequest)                    // take the request interface coming in from above function and cast it as CreateUserRequest type defined in 5_reqresp.go
+		ok, err := s.CreateUser(ctx, req.Email, req.Password) // now we can pass Email and Password from CreateUserRequest struct into the CreateUser method
+		return CreateUserResponse{Ok: ok}, err
+	}
 }
 
-func makeGetUserEndpoint(s Service) endpoint.Endpoint { // Takes a Service interface, return and Endpoint for the service method
-	return func (ctx context.Context, request  interface{}) (interface{}, error) {// since Endpoint is a function it has to return a function
-		req := request.(GetUserRequest) // request interface above transformed in to GetUserRequest(structure)
-		email, err := s.GetUser(ctx, req.Id)
+func makeGetUserEndpoint(s Service) endpoint.Endpoint {
+	return func(ctx context.Context, request interface{}) (interface{}, error) {
+		req := request.(GetUserRequest)      // take the request interface coming in from above function and cast it as GetUserRequest type defined in 5_reqresp.go
+		email, err := s.GetUser(ctx, req.ID) // now we can pass Id CreateUserRequest struct into the GetUser method
 		return GetUserResponse{
 			Email: email,
 		}, err
-		}
+	}
 }
