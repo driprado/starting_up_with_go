@@ -8,3 +8,9 @@
 // Go By Example: https://gobyexample.com/  <== Consult as needed
 // Go Specs: https://golang.org/ref/spec    <== Consult as needed
 
+// // Reaup list:
+
+// Data Structures
+https://blog.golang.org/slices-intro
+https://medium.com/@victorsteven/understanding-data-structures-in-golang-f55205afdcaa
+https://www.golangprograms.com/go-language/arrays.html
