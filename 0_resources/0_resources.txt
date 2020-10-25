@@ -11,6 +11,9 @@
 // // Reaup list:
 
 // Data Structures
-https://blog.golang.org/slices-intro
+https://blog.golang.org/slices-intro - done
+https://golang.org/doc/effective_go.html#slices
+https://golang.org/doc/effective_go.html#arrays
+https://golang.org/ref/spec#Slice_types
 https://medium.com/@victorsteven/understanding-data-structures-in-golang-f55205afdcaa
 https://www.golangprograms.com/go-language/arrays.html

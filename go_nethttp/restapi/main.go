@@ -1,4 +1,4 @@
-// https://youtu.be/SonwZ6MF5BE?t=1174 ==> Do this from personal computer
+// https://youtu.be/SonwZ6MF5BE?t=1174
 
 package main
 
