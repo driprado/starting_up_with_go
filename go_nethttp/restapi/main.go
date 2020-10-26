@@ -1,6 +1,6 @@
 // https://youtu.be/SonwZ6MF5BE
 // @TODO:
-// 1 - Make delete from slice work
+// 1 - Make delete from slice work - ongoing, reading slices docs (0_resources)
 // 2 - Implement SQL DB into it
 // 3 - Implement dynamoDB into it
 

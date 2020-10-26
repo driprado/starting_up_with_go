@@ -1,21 +1,41 @@
+// Go Slices
+
+// https://blog.golang.org/slices-intro - done
+// https://golang.org/doc/effective_go.html#slices - done
+// https://golang.org/doc/effective_go.html#arrays
+// https://golang.org/ref/spec#Slice_types
+// https://medium.com/@victorsteven/understanding-data-structures-in-golang-f55205afdcaa
+// https://www.golangprograms.com/go-language/arrays.html
+
 package main
 
 import "fmt"
 
 func main() {
-	// #===#===#==#==#==# Slices #===#===#==#==#==# //
 
-	// The make built-in function allocates and initializes an object of type slice(basically a list), map, or chan
-	// The first argument is a type, not a value.
+	// Slices are analogous to arrays in other languages, but have some unusual properties.
+	// The slice type is an abstraction built on top of Go's array type.
+
+	// Slice attribution: []<type>:
+	letters := []string{"a", "b", "c", "d"} // slice letters of type string has four items: "a", "b", "c", "d"
+	println(letters)
+
+	// A slice can be created with the built-in function called make
+	// func make([]T, len, cap) []T
+	// When called, make allocates an array and returns a slice that refers to that array.
+
+	l := make([]string, 4, 4) // make a slice of strings with lenght and capacity of 4 elements
+	println(l[3])             // print element 3 of slice (empty string) as elements values were never given
+
 	mySlice := make([]string, 0)                      // Creates a slice of length 0
 	fmt.Println("length of mySlice:", len(mySlice))   // Return 0
 	mySlice = append(mySlice, "one")                  // Append "word" to slice
 	fmt.Println("Content of position 0:", mySlice[0]) // Returns 1
 	fmt.Println("length of mySlice:", len(mySlice))   // Returns 1
-	mySlice = append(mySlice, "two")
-	fmt.Println("length of mySlice:", len(mySlice)) // Returns 2
+	mySlice = append(mySlice, "two")                  // Append sring "two" to mySlice
+	fmt.Println("length of mySlice:", len(mySlice))   // Returns 2
 	fmt.Println("Contents mySlice:", mySlice)
-	mySlice[0] = "zero" // Put "zero" in position 0 of slice
+	mySlice[0] = "zero" // Put "zero" in position 0 of slice (replace "one")
 	fmt.Println("Contents mySlice:", mySlice)
 
 	//Another Slice
@@ -52,7 +72,7 @@ func main() {
 	// Contents of sliceFour: [x y]
 
 	sliceThree[0] = "a"                              // Changing stuff on sliceThree:
-	fmt.Println("Contents of sliceFour:", sliceFour) // Will change consequentially sliceFour
+	fmt.Println("Contents of sliceFour:", sliceFour) // Will change consequentially sliceFour since both slices have the same underlying array
 	// Output:
 	// Contents of sliceFour: [a y]
 
@@ -63,7 +83,7 @@ func main() {
 	// varSliceFive Contents: [a y z]
 	sliceThree[0] = "x"                                 // Changing stuff on sliceThree
 	fmt.Println("varSliceFive Contents:", varSliceFive) // Consequently changes varSliceFive
-	// Output: varSliceFive Contents: [a y z]
+	// Output: varSliceFive Contents: [x y z]
 
 	// #===#===#==#==#==# Maps #===#===#==#==#==# //
 
