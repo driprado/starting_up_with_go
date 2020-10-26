@@ -1,4 +1,8 @@
-// https://youtu.be/SonwZ6MF5BE?t=1174
+// https://youtu.be/SonwZ6MF5BE
+// @TODO:
+// 1 - Make delete from slice work
+// 2 - Implement SQL DB into it
+// 3 - Implement dynamoDB into it
 
 package main
 
@@ -79,18 +83,17 @@ func updateBook(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-//  --> @TODO: Check how to properly manipulate slices
+// Delete book
 func deleteBook(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
-	parameters := mux.Vars(r) // returns the url variables from the current request
+	parameters := mux.Vars(r)
 	for index, book := range books {
 		if book.ID == parameters["id"] {
-			books = append(books[:index], books[index+1:]...) // apparently deletes a book via index
+			books = append(books[:index], books[index+1:]...)
 			break
 		}
 	}
-	json.NewEncoder(w).Encode(books) // Enconde ResponseWriter
-
+	json.NewEncoder(w).Encode(books)
 }
 
 func main() {
