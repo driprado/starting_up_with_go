@@ -5,8 +5,8 @@
 // A Tour of Go: https://tour.golang.org/list   <==Actually do this
 // Effective Go: https://golang.org/doc/effective_go.html   <== Actually read up if possible
 // Go Documentation: https://golang.org/doc/    <== Readup when possible
-// Go By Example: https://gobyexample.com/  <== Consult as needed
-// Go Specs: https://golang.org/ref/spec    <== Consult as needed
+// Go By Example: https://gobyexample.com/      <== Consult as needed
+// Go Specs: https://golang.org/ref/spec        <== Consult as needed
 
 // // Reaup list:
 
@@ -17,3 +17,10 @@ https://golang.org/doc/effective_go.html#arrays
 https://golang.org/ref/spec#Slice_types
 https://medium.com/@victorsteven/understanding-data-structures-in-golang-f55205afdcaa
 https://www.golangprograms.com/go-language/arrays.html
+
+// net/http:
+https://golang.org/doc/articles/wiki/
+https://golang.org/pkg/net/http/
+
+// Microservices:
+https://youtu.be/sjd2ePF3CuQ
