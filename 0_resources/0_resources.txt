@@ -1,14 +1,15 @@
-//// Repos:
-// Todd McLeod - GolangTraining: https://github.com/GoesToEleven/GolangTraining <== LOOK AT THIS FOR REAL
-
-//// Sites:
-// A Tour of Go: https://tour.golang.org/list   <==Actually do this
-// Effective Go: https://golang.org/doc/effective_go.html   <== Actually read up if possible
-// Go Documentation: https://golang.org/doc/    <== Readup when possible
-// Go By Example: https://gobyexample.com/      <== Consult as needed
-// Go Specs: https://golang.org/ref/spec        <== Consult as needed
-
 // // Reaup list:
+
+
+// Official Sites:
+// A Tour of Go: https://tour.golang.org/list               <==Actually do this
+// Effective Go: https://golang.org/doc/effective_go.html   <== Actually read up if possible
+// Go Documentation: https://golang.org/doc/                <== Readup when possible
+// Go Specs: https://golang.org/ref/spec                    <== Consult as needed
+
+// Other:
+// Go By Example: https://gobyexample.com/                  <== Consult as needed
+
 
 // Data Structures
 https://blog.golang.org/slices-intro - done
