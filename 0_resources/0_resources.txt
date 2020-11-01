@@ -1,5 +1,7 @@
-// // Reaup list:
+// // Course:
+https://www.udemy.com/course/learn-how-to-code/
 
+// // Reaup list:
 
 // Official Sites:
 // A Tour of Go: https://tour.golang.org/list               <==Actually do this
