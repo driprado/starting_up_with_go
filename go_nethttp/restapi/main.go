@@ -1,8 +1,11 @@
 // https://youtu.be/SonwZ6MF5BE
 // @todo:
 // 1 - Make delete from slice work
+//	a) make delete function
 // 2 - Implement SQL DB into it
+//	a) t.ly/91xk
 // 3 - Implement dynamoDB into it
+// 4 - Make it microservices
 
 // @note:
 // To test this code run locally:
