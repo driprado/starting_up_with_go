@@ -4,6 +4,13 @@
 // 2 - Implement SQL DB into it
 // 3 - Implement dynamoDB into it
 
+// @note:
+// To test this code run locally:
+// go build
+// ./restapi
+// It's served at: http://localhost:8000/api/books
+// Test routes with postman
+
 package main
 
 import (
