@@ -95,12 +95,16 @@ func updateBook(w http.ResponseWriter, r *http.Request) {
 }
 
 // Delete book - @todo: test this
+func deleteFromSlice(s []Book, index int) []Book {
+	return append(s[:index], s[index+1:]...)
+}
+
 func deleteBook(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	parameters := mux.Vars(r)
 	for i, book := range books {
 		if book.ID == parameters["id"] {
-			books = append(books[:i], books[i+1:]...)
+			books = deleteFromSlice(books, i)
 			break
 		}
 	}
