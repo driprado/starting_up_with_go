@@ -4,20 +4,27 @@ import "fmt"
 
 func main() {
 
+	// Golang for loop skeleton:
+	// for init; condition; post {}
+	// ForStmt = "for" [ Condition | ForClause | RangeClause ] Block .
+	// Condition = Expression .
+
 	// Normal incremental loop
 	for i := 0; i < 10; i++ {
 		fmt.Println(i)
 	}
 
+	// break
 	// Insertnig a breakpoint
 	for n := 0; n < 10; n++ {
-		if n > 5 {
+		if n > 8 {
 			break // Breaks once n reaches 5
 		}
 		fmt.Println(n)
 	}
 
-	// Using continue will skiip an item
+	//contirue
+	// Using continue will skip an item
 	a := 5
 	for b := 0; b < 10; b++ {
 		if b == a {
@@ -42,4 +49,23 @@ func main() {
 	for k, v := range phrase { // k=key(position in range), v=value(runes, need to be converted to string)
 		fmt.Println(k, string(v))
 	}
+
+	// Nested Loops
+	for o := 0; o <= 10; o++ {
+		fmt.Println("OUT")
+		for i := 0; i <= 5; i++ {
+			fmt.Println("in")
+		}
+	}
+
+	// For with implicit condition
+	n := 0
+	for { //forever?
+		if n > 20 {
+			break
+		}
+		fmt.Println(n)
+		n++
+	}
+	fmt.Println("DONE")
 }
