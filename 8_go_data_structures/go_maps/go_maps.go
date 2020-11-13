@@ -81,43 +81,47 @@ func main() {
 	// You're a headhunter and have a map of programmers and their preferred programming languages
 	// You want to know which are the programmers that know Golang:
 
-	// RE-think this
-
+	// @todo NEED DECENT VAR NAMES, RENAME STUFF!!!
 	type Coders struct {
 		Name      string
-		PrefLangs []string
+		Languages []string
 	}
 
-	coder0 := Coders{
-		Name:      "Ada",
-		PrefLangs: []string{"math", "differential", "calculus", "discrete"},
+	coder := []*Coders{
+		{
+			Name:      "Ada",
+			Languages: []string{"math", "differential", "calculus", "discrete"},
+		},
+		{
+			Name:      "Hoper",
+			Languages: []string{"assembly", "cobol", "contran"},
+		},
+		{
+			Name:      "Borg",
+			Languages: []string{"assembly", "cobol", "C", "bash"},
+		},
+		{
+			Name:      "Hamilton",
+			Languages: []string{"assembly", "corona"},
+		},
+		{
+			Name:      "Korbes",
+			Languages: []string{"ruby", "python", "go"},
+		},
+		{
+			Name:      "Prado",
+			Languages: []string{"ruby", "python", "go"},
+		},
 	}
 
-	coder1 := Coders{
-		Name:      "Hoper",
-		PrefLangs: []string{"assembly", "cobol", "contran"},
+	fluent := make(map[string][]*Coders)
+	for _, programer := range coder {
+		for _, lan := range programer.Languages {
+			fluent[lan] = append(fluent[lan], programer)
+		}
 	}
 
-	coder2 := Coders{
-		Name:      "Borg",
-		PrefLangs: []string{"assembly", "cobol", "C", "bash"},
+	for _, c := range fluent["python"] {
+		fmt.Println(c.Name, "codes in python")
 	}
-
-	coder3 := Coders{
-		Name:      "Hamilton",
-		PrefLangs: []string{"assembly", "corona"},
-	}
-
-	coder4 := Coders{
-		Name:      "Korbes",
-		PrefLangs: []string{"ruby", "python", "go"},
-	}
-
-	coder5 := Coders{
-		Name:      "Prado",
-		PrefLangs: []string{"ruby", "python", "go"},
-	}
-
-	fmt.Println(coder0)
-
 }
