@@ -1,6 +1,6 @@
 //////////////////////////////////////// Readup:
 // https://golang.org/ref/spec#Map_types - @done
-// https://blog.golang.org/maps
+// https://blog.golang.org/maps 				 - @done
 
 //////////////////////////////////////// Notes:
 // A map is an unordered group of elements.
@@ -81,47 +81,31 @@ func main() {
 	// You're a headhunter and have a map of programmers and their preferred programming languages
 	// You want to know which are the programmers that know Golang:
 
-	// @todo NEED DECENT VAR NAMES, RENAME STUFF!!!
+	// Coders struct holds coders data
 	type Coders struct {
 		Name      string
 		Languages []string
 	}
 
-	coder := []*Coders{
-		{
-			Name:      "Ada",
-			Languages: []string{"math", "differential", "calculus", "discrete"},
-		},
-		{
-			Name:      "Hoper",
-			Languages: []string{"assembly", "cobol", "contran"},
-		},
-		{
-			Name:      "Borg",
-			Languages: []string{"assembly", "cobol", "C", "bash"},
-		},
-		{
-			Name:      "Hamilton",
-			Languages: []string{"assembly", "corona"},
-		},
-		{
-			Name:      "Korbes",
-			Languages: []string{"ruby", "python", "go"},
-		},
-		{
-			Name:      "Prado",
-			Languages: []string{"ruby", "python", "go"},
-		},
+	// A list coders of pointing to type Code
+	codersList := []*Coders{
+		{Name: "Ada", Languages: []string{"math", "differential", "calculus", "discrete"}},
+		{Name: "Hoper", Languages: []string{"assembly", "cobol", "contran"}},
+		{Name: "Borg", Languages: []string{"assembly", "cobol", "C", "bash"}},
+		{Name: "Hamilton", Languages: []string{"assembly", "corona"}},
+		{Name: "Korbes", Languages: []string{"ruby", "python", "go"}},
+		{Name: "Prado", Languages: []string{"ruby", "python", "go"}},
 	}
 
-	fluent := make(map[string][]*Coders)
-	for _, programer := range coder {
-		for _, lan := range programer.Languages {
-			fluent[lan] = append(fluent[lan], programer)
+	// coderLangs maps a string to each coder
+	coderLangs := make(map[string][]*Coders)
+	for _, coder := range codersList { // for eahc coder in the list of coders,
+		for _, langs := range coder.Languages { // for each language in the list of languages for current coder,
+			coderLangs[langs] = append(coderLangs[langs], coder) // append to each language the coders that are fluent
 		}
 	}
 
-	for _, c := range fluent["python"] {
-		fmt.Println(c.Name, "codes in python")
+	for _, coder := range coderLangs["go"] { // for each coder in "coderLangs" map where the laguage is "go"
+		fmt.Println(coder.Name, "codes in go") // print the coder name
 	}
 }
