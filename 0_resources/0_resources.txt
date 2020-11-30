@@ -18,7 +18,7 @@
 // https: //golang.org/doc/effective_go.html#arrays - @done
 // https: //golang.org/ref/spec#Slice_types         - @done
 // https: //medium.com/@victorsteven/understanding-data-structures-in-golang-f55205afdcaa - @done
-// https: //www.golangprograms.com/go-language/slices-in-golang-programming.html - @done // do this way
+// https: //www.golangprograms.com/go-language/slices-in-golang-programming.html - @done
 
 // // net/http:
 // https://golang.org/doc/articles/wiki/
