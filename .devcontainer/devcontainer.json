@@ -1,4 +1,5 @@
 {
   "name": "GO ENV",
   "dockerFile": "Dockerfile",
+  "appPort": [8000],
 }
