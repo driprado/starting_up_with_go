@@ -35,8 +35,8 @@
 
 ## TODO
 - [ ] How to install go 
-- [ ]How to configure vs code  
-- [ ]How to setup gopath  
+- [ ] How to configure vs code  
+- [ ] How to setup gopath  
 <br>
 
 # Go Comands
