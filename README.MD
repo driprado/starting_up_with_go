@@ -20,11 +20,11 @@
 - [x] https://www.golangprograms.com/go-language/slices-in-golang-programming.html
 
 ### go_nethttp
-- [] https://golang.org/doc/articles/wiki/ - @here
-- [] https://golang.org/pkg/net/http/
+- [ ] https://golang.org/doc/articles/wiki/ - @here
+- [ ] https://golang.org/pkg/net/http/
 
 ### Microservices:
-- [] https://youtu.be/sjd2ePF3CuQ
+- [ ] https://youtu.be/sjd2ePF3CuQ
 
 ## VS Code Go Extensions Setup:
 
