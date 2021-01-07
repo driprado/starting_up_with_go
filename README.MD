@@ -41,7 +41,10 @@
 
 # Go Comands
 
-go fmt // Formats code in current directory or in specified directory  
-go run <file.go> // Run a go code  
-got install // TODO  
-go build // TODO  
+`go env` - displays your local golang environment variables   
+`go version` - displays go version  
+`go fmt` - Formats code in current directory or in a directory specified by path  
+`go run <file.go>` - run a go code  
+`go build` - build your code binaries into an executable  
+`got install` - install your exeutable so it can be run from anywhere in the system  
+`go help` - go help
