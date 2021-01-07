@@ -1,4 +1,0 @@
-go fmt // Formats code in current directory or in specified directory
-go run <file.go> // Run a go code
-got install // TODO
-go build // TODO

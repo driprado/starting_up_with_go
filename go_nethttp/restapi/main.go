@@ -1,18 +1,8 @@
-// https://youtu.be/SonwZ6MF5BE
-// @todo:
-// 1 - Make delete from slice work - @done
-//	a) make delete function				 - @done
-// 2 - Implement SQL DB into it
-//	a) t.ly/91xk
-// 3 - Implement dynamoDB into it
-// 4 - Make it microservices
-
 // @note:
 // To test this code run locally:
-// add  ("appPort": [8000],) to .devcontainer
 // go build
 // ./restapi
-// It's served at: http://localhost:8000/api/books
+// It's served at: http://localhost:8000/api/books (port 8000 is maped in .devcontainer)
 // Test routes with postman
 
 package main
