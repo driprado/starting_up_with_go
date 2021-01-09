@@ -26,18 +26,9 @@
 ### Microservices:
 - [ ] https://youtu.be/sjd2ePF3CuQ
 
-## VS Code Go Extensions Setup:
-
-1 Extensions > Go(by google) > Install > Reload  
-2 Settings > User > Go:InferGopah (thick box)  
-3 Open command pallet(Command+Shift+p) > type Go:Install/Update Tools  
-4 Add go to your home folder, add gopath to .zshrc  
-
-## TODO
-- [ ] How to install go 
-- [ ] How to configure vs code  
-- [ ] How to setup gopath  
-<br>
+### TODO
+- How to install go
+- Re write go modules, explaining package mamagenent concepts
 
 # Summary
 

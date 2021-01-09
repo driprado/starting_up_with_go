@@ -1,3 +1,11 @@
+// Consolidate this:
+// https://medium.com/@adiach3nko/package-management-with-go-modules-the-pragmatic-guide-c831b4eaaf31
+// https://deepsource.io/blog/go-modules/
+// https://blog.golang.org/using-go-modules
+
+
+
+
 // https://blog.golang.org/using-go-modules
 
 // 1 - Create hello.go
