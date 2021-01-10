@@ -27,7 +27,6 @@
 - [ ] https://youtu.be/sjd2ePF3CuQ
 
 ### TODO
-- How to install go
 - Re write go modules, explaining package mamagenent concepts
 
 # Summary
